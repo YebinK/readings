@@ -1,3 +1,4 @@
 rootProject.name = 'readings'
 include 'Spring5'
+include 'spring-data-jdbc'
 
