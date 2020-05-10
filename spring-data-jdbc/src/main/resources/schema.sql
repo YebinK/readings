@@ -22,16 +22,17 @@ ADD FOREIGN KEY (parent) REFERENCES parent (id);
 
 
 -- MANY TO MANY
-CREATE TABLE station (
-    id bigint primary key auto_increment,
-    station_name varchar(255) not null
-);
-
 CREATE TABLE line (
     id bigint primary key auto_increment,
     line_name varchar(255) not null
 );
 
-CREATE TABLE line_station (
+CREATE TABLE station (
+    id bigint primary key auto_increment,
+    station_name varchar(255) not null
+);
 
-)
+CREATE TABLE line_station (
+    line bigint not null,
+    station bigint not null
+);
